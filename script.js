@@ -14,10 +14,8 @@ document.querySelector(".cont").addEventListener("click", e => {
             div.innerHTML = "Are you sure ?"
 
             document.querySelector(".cont").append(div)
-            // div.style = "transform: translate(100%, 100px)"
-            placeRandomly(div)
-            placeRandomly(e.target)
-            // e.target.style = "transform: translate(0, -100px)"
+            div.style = "transform: translate(0, 100px)"
+            e.target.style = "transform: translate(0, -100px)"
         }
 
         //counter equals = 2
@@ -25,10 +23,8 @@ document.querySelector(".cont").addEventListener("click", e => {
             const div = document.querySelector(".response")
             div.innerHTML = "oh c'mon!"
             document.querySelector(".cont").prepend(div)
-            // div.style = "transform: translate(0, 0)"
-            placeRandomly(div)
-            placeRandomly(e.target)
-            // e.target.style = "transform: translate(100%, 200px)"
+            div.style = "transform: translate(0, 0)"
+            e.target.style = "transform: translate(100px, 200px)"
         }
 
         //counter equals = 3
@@ -37,8 +33,7 @@ document.querySelector(".cont").addEventListener("click", e => {
             div.innerHTML = "Bruhhhhhh !!!"
             document.querySelector(".cont").prepend(div)
             placeRandomly(div)
-            placeRandomly(e.target)
-            // e.target.style = "transform: translate(80%, 200px)"
+            e.target.style = "transform: translate(80px, 200px)"
 
 
             //multiply the yes button
@@ -53,12 +48,9 @@ document.querySelector(".cont").addEventListener("click", e => {
 
         //counter equals = 4
         if(no_counter == 4){
-            const random = Math.sin(Math.random() * 6) * 100
             const div = document.querySelector(".response")
             div.innerHTML = "Are you sure ?"
             document.querySelector(".cont").prepend(div)
-            // div.style = `transform: translate(${random}%, ${random}px)`
-            // e.target.style = `transform: translate(${random}%, ${random}px)`
             placeRandomly(div)
             placeRandomly(e.target)
 
@@ -78,10 +70,8 @@ document.querySelector(".cont").addEventListener("click", e => {
             const div = document.querySelector(".response")
             div.innerHTML = "Why \"NO\"\?"
             document.querySelector(".cont").prepend(div)
-            // div.style = `transform: translate(${random}%, ${random}px)`
             placeRandomly(div)
             placeRandomly(e.target)
-            // e.target.style = `transform: translate(${random}%, ${random}px)`
 
             //multiply the yes button
             for(let i = 0; i < 5; i++){
