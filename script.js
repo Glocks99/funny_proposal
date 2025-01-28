@@ -126,7 +126,7 @@ document.querySelector(".cont").addEventListener("click", e => {
         }
 
         if(yes_counter == 2){
-            document.querySelector(".quest").innerHTML = "Nice !"
+            document.querySelector(".quest").innerHTML = "Nice !, Happy valentines Day Bby ❤"
             buttons.forEach(btn => {
                 btn.remove()
             })
