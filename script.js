@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll("button")
 let no_counter = 0
 let yes_counter = 0
+const sound = new Audio()
 
 document.querySelector(".cont").addEventListener("click", e => {
     if(e.target.innerHTML == "NO"){
@@ -8,6 +9,8 @@ document.querySelector(".cont").addEventListener("click", e => {
 
         //counter equals = 1
         if(no_counter == 1){
+            sound.src = "./sounds/mystery-thriller.mp3"
+            sound.play()
             const div = document.createElement("div")
             div.setAttribute("class", "response")
             div.classList.add("quest")
@@ -100,7 +103,10 @@ document.querySelector(".cont").addEventListener("click", e => {
     }
     else if(e.target.innerHTML == "YES"){
         yes_counter += 1
+        
         if(yes_counter == 1){
+            sound.src = "./sounds/mystery-solved.mp3"
+            sound.play()
             const res = document.querySelector(".response")
             if(res){
                 res.remove()
@@ -140,6 +146,9 @@ document.querySelector(".cont").addEventListener("click", e => {
               });
 
             animation.play();
+            sound.src = "./sounds/what_is_lovee.mp3"
+            sound.loop = true
+            sound.play()
         }
         
     }
