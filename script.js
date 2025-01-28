@@ -146,7 +146,7 @@ document.querySelector(".cont").addEventListener("click", e => {
               });
 
             animation.play();
-            sound.src = "./sounds/what_is_lovee.mp3"
+            sound.src = "./sounds/i-will-always-love-you-low.mp3"
             sound.loop = true
             sound.play()
         }
